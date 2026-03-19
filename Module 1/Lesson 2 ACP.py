@@ -1,9 +1,9 @@
 # Storing 5 different birthday dates in 5 variables
-birthday1 = "January 15"
-birthday2 = "March 22"
-birthday3 = "July 04"
-birthday4 = "September 10"
-birthday5 = "December 25"
+birthday1 = "March 1"
+birthday2 = "May 18"
+birthday3 = "September 19"
+birthday4 = "August 31"
+birthday5 = "October 26"
 
 # Printing them to check the storage
 print("Birthday 1:", birthday1)
