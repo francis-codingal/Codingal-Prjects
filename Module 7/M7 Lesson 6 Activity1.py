@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
+from PIL import Image, ImageTk
 
 class RestaurantOrderManagement:
     def __init__(self, root):
@@ -89,14 +90,14 @@ class RestaurantOrderManagement:
         canvas = tk.Canvas(root, width=bg_width, height=bg_height)
         canvas.pack()
 
-        original_image = tk.PhotoImage(file="South Indian Res BG.jpg")
-        background_image = original_image.subsample(
-            original_image.width() // bg_width,
-            original_image.height() // bg_height
-        )
+        
+        opened_image = Image.open("South Indian Res BG.jpg")
+        resized_image = opened_image.resize((bg_width, bg_height), Image.Resampling.LANCZOS)
+        
+        background_image = ImageTk.PhotoImage(resized_image)
 
         canvas.create_image(0, 0, anchor=tk.NW, image=background_image)
-        canvas.image = background_image
+        canvas.image = background_image # Keep a reference so garbage collection doesn't delete it
 
     def update_menu_prices(self, *args):
         currency = self.currency_var.get()
