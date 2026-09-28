@@ -14,7 +14,7 @@ marks = [88, 76, 92, 67, 85]
 
 student_marks = pd.Series(
     marks,
-    index=["Francis", "Viki", "Gowtham", "Dinesh", "Pradeep"]
+    index=["Aarav", "Meera", "Kabir", "Anaya", "Rohan"]
 )
 
 print(student_marks)
@@ -22,7 +22,7 @@ print(student_marks)
 print("\nPART 3: Pandas DataFrame")
 
 data = {
-    "Student": ["Francis", "Viki", "Gowtham", "Dinesh", "Pradeep"],
+    "Student": ["Aarav", "Meera", "Kabir", "Anaya", "Rohan"],
     "Math": [88, 76, 92, 67, 85],
     "Science": [91, 80, 89, 72, 87],
     "English": [84, 78, 95, 70, 82],
@@ -56,7 +56,7 @@ print(student_data.info())
 print("\nPART 6: Cleaning Data")
 
 messy_data = {
-    "Student": ["Francis", "Viki", "Gowtham", "Dinesh", "Pradeep"],
+    "Student": ["Aarav", "Meera", "Kabir", "Anaya", "Rohan"],
     "Math": [88, None, 92, 67, 85],
     "Science": [91, 80, None, 72, 87],
     "English": [84, 78, 95, None, 82]
